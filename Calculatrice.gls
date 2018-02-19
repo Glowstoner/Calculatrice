@@ -1,0 +1,54 @@
+~NAME : Calculatrice
+~VERSION : 1.0
+
+@varSTR_choice
+@varDOUBLE_t1
+@varDOUBLE_t2
+@varDOUBLE_r
+
+print("Bonjour, choix : +, -, *, /")
+
+input("Votre choix : ")->@choice
+
+if(@choice EQUALS "+") {
+	print("Vous avez choisi l'addition !")
+}else_if(@choice EQUALS "-") {
+	print("Vous avez choisi la soustraction !")
+}else_if(@choice EQUALS "*") {
+	print("Vous avez choisi la multiplication !")
+}else_if(@choice EQUALS "/") {
+	print("Vous avez choisi la division !")
+}else_if(@choice EQUALS "%") {
+	print("Vous avez choisi le modulo !")
+}else {
+	print("Choix invalide pour "+@choice+", fermeture ...")
+
+	end
+}
+
+input("Votre premier terme/facteur : ")->@t1
+input("Votre second terme/facteur : ")->@t2
+
+if(@choice EQUALS "+") {
+	@r = @t1 + @t2
+
+	print("La somme de "+@t1+" et de "+@t2+" est égale à "+@r)
+}else_if(@choice EQUALS "-") {
+	@r = @t1 - @t2
+
+	print("La différence de "+@t1+" et de "+@t2+" est égale à "+@r)
+}else_if(@choice EQUALS "*") {
+	@r = @t1 * @t2
+
+	print("Le produit de "+@t1+" par "+@t2+" est égal à "+@r)
+}else_if(@choice EQUALS "/") {
+	@r = @t1 / @t2
+
+	print("Le quotient de "+@t1+" par "+@t2+" est égal à "+@r)
+}else_if(@choice EQUALS "%") {
+	@r = @t1 % @t2
+
+	print("Le modulo de "+@t1+" par "+@t2+" est égal à "+@r)
+}
+
+end
